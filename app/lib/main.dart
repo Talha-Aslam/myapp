@@ -115,26 +115,37 @@ class Home extends StatelessWidget {
       //     Icon(Icons.ac_unit_sharp)
       //   ],
       // ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        crossAxisAlignment: CrossAxisAlignment.start,
+      body: Row(
         children: <Widget>[
-          Container(
-            padding: EdgeInsets.all(20.0),
-            child: Text("data"),
-            color: Colors.amberAccent[100],
+          Expanded(flex: 1, child: Image.asset('Images/c.jpg')),
+          Expanded(
+            flex: 1,
+            child: Container(
+              padding: EdgeInsets.all(20.0),
+              child: Text("1"),
+              color: Colors.amberAccent[100],
+            ),
           ),
-          Text(
-            "Hello mein haniya mein cute hun bht",
-            style: TextStyle(
-                color: const Color.fromARGB(255, 20, 20, 20), fontSize: 20.0),
+          Expanded(
+            flex: 1,
+            child: Container(
+              padding: EdgeInsets.all(20.0),
+              child: Text("2"),
+              color: Color.fromARGB(255, 8, 184, 108),
+            ),
           ),
-          ElevatedButton(onPressed: () {}, child: Text("Click me")),
-          Icon(Icons.ac_unit_sharp)
+          Expanded(
+            flex: 1,
+            child: Container(
+              padding: EdgeInsets.all(20.0),
+              child: Text("3"),
+              color: const Color.fromARGB(255, 140, 127, 255),
+            ),
+          ),
         ],
       ),
-      floatingActionButton: const FloatingActionButton(
-        onPressed: null,
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
         child: Text("Click"),
         //backgroundColor: const Color.fromARGB(255, 129, 175, 213),
       ),
