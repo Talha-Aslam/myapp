@@ -61,7 +61,7 @@ class Home extends StatelessWidget {
       // body: Center(
       //     child: IconButton(
       //   onPressed: () {
-      //     print("haniya pressed the button");
+      //     print("he pressed the button");
       //   },
       //   icon: Icon(
       //     Icons.accessibility_new,
@@ -107,7 +107,7 @@ class Home extends StatelessWidget {
       //       color: Colors.amberAccent[100],
       //     ),
       //     Text(
-      //       "Hello mein haniya mein cute hun bht",
+      //       "Hello its me",
       //       style: TextStyle(
       //           color: const Color.fromARGB(255, 20, 20, 20), fontSize: 20.0),
       //     ),
