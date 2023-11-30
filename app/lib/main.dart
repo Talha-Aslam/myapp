@@ -12,19 +12,19 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text(
-          "Hania First App",
-          style: TextStyle(
-            fontSize: 30.0,
-            fontWeight: FontWeight.bold,
-            color: Color.fromARGB(115, 0, 0, 0),
-            //backgroundColor: const Color.fromARGB(255, 129, 175, 213),
-          ),
-        ),
-        backgroundColor: Color.fromARGB(95, 203, 114, 114),
-        centerTitle: true,
-      ),
+      // appBar: AppBar(
+      //   title: const Text(
+      //     "Hania First App",
+      //     style: TextStyle(
+      //       fontSize: 30.0,
+      //       fontWeight: FontWeight.bold,
+      //       color: Color.fromARGB(115, 0, 0, 0),
+      //       //backgroundColor: const Color.fromARGB(255, 129, 175, 213),
+      //     ),
+      //   ),
+      //   backgroundColor: Color.fromARGB(95, 203, 114, 114),
+      //   centerTitle: true,
+      // ),
       //***********to add text at center***********
       // body: const Center(
       //   child: Text(
@@ -115,39 +115,55 @@ class Home extends StatelessWidget {
       //     Icon(Icons.ac_unit_sharp)
       //   ],
       // ),
-      body: Row(
-        children: <Widget>[
-          Expanded(flex: 1, child: Image.asset('Images/c.jpg')),
-          Expanded(
-            flex: 1,
-            child: Container(
-              padding: EdgeInsets.all(20.0),
-              child: Text("1"),
-              color: Colors.amberAccent[100],
+      // body: Row(
+      //   children: <Widget>[
+      //     Expanded(flex: 1, child: Image.asset('Images/c.jpg')),
+      //     Expanded(
+      //       flex: 1,
+      //       child: Container(
+      //         padding: EdgeInsets.all(20.0),
+      //         child: Text("1"),
+      //         color: Colors.amberAccent[100],
+      //       ),
+      //     ),
+      //     Expanded(
+      //       flex: 1,
+      //       child: Container(
+      //         padding: EdgeInsets.all(20.0),
+      //         child: Text("2"),
+      //         color: Color.fromARGB(255, 8, 184, 108),
+      //       ),
+      //     ),
+      //     Expanded(
+      //       flex: 1,
+      //       child: Container(
+      //         padding: EdgeInsets.all(20.0),
+      //         child: Text("3"),
+      //         color: const Color.fromARGB(255, 140, 127, 255),
+      //       ),
+      //     ),
+      //   ],
+      // ),
+      // floatingActionButton: FloatingActionButton(
+      //   onPressed: () {},
+      //   child: Text("Click"),
+      //   //backgroundColor: const Color.fromARGB(255, 129, 175, 213),
+      // ),
+      // *********************************************************************
+      // new app to show your profile
+      appBar: AppBar(
+        backgroundColor: Colors.blueGrey[300],
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Icon(
+              Icons.account_circle,
+              size: 40,
+              color: Colors.teal[600],
             ),
-          ),
-          Expanded(
-            flex: 1,
-            child: Container(
-              padding: EdgeInsets.all(20.0),
-              child: Text("2"),
-              color: Color.fromARGB(255, 8, 184, 108),
-            ),
-          ),
-          Expanded(
-            flex: 1,
-            child: Container(
-              padding: EdgeInsets.all(20.0),
-              child: Text("3"),
-              color: const Color.fromARGB(255, 140, 127, 255),
-            ),
-          ),
-        ],
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        child: Text("Click"),
-        //backgroundColor: const Color.fromARGB(255, 129, 175, 213),
+            Text("Profile Pic")
+          ],
+        ),
       ),
     );
   }
