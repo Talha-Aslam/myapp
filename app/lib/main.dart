@@ -154,6 +154,7 @@ class Home extends StatelessWidget {
       // *********************************************************************
       // *********************************************************************
       // new app to show your profile
+      backgroundColor: Colors.grey[600],
       appBar: AppBar(
         backgroundColor: Colors.red[300],
         title: Row(
@@ -165,6 +166,27 @@ class Home extends StatelessWidget {
               color: Colors.blueGrey[100],
             ),
             Text("  Profile Pic")
+          ],
+        ),
+      ),
+      body: Padding(
+        padding: EdgeInsets.fromLTRB(30, 40, 30, 0.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Text(
+              "Name:",
+              style: TextStyle(
+                fontSize: 20.0,
+              ),
+            ),
+            Text(
+              "Talha Aslam",
+              style: TextStyle(
+                fontSize: 30.0,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
           ],
         ),
       ),
