@@ -155,16 +155,16 @@ class Home extends StatelessWidget {
       // *********************************************************************
       // new app to show your profile
       appBar: AppBar(
-        backgroundColor: Colors.blueGrey[300],
+        backgroundColor: Colors.red[300],
         title: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Icon(
               Icons.account_circle,
               size: 40,
-              color: Colors.teal[600],
+              color: Colors.blueGrey[100],
             ),
-            Text("Profile Pic")
+            Text("  Profile Pic")
           ],
         ),
       ),
