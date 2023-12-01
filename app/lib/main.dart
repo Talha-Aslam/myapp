@@ -115,6 +115,7 @@ class Home extends StatelessWidget {
       //     Icon(Icons.ac_unit_sharp)
       //   ],
       // ),
+      //*****************expand widget*******************/
       // body: Row(
       //   children: <Widget>[
       //     Expanded(flex: 1, child: Image.asset('Images/c.jpg')),
@@ -144,11 +145,13 @@ class Home extends StatelessWidget {
       //     ),
       //   ],
       // ),
+      //**************Floarting button*******************/
       // floatingActionButton: FloatingActionButton(
       //   onPressed: () {},
       //   child: Text("Click"),
       //   //backgroundColor: const Color.fromARGB(255, 129, 175, 213),
       // ),
+      // *********************************************************************
       // *********************************************************************
       // new app to show your profile
       appBar: AppBar(
