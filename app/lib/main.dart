@@ -190,7 +190,7 @@ class _HomeState extends State<Home> {
               // to show image in a cricle formate
               child: CircleAvatar(
                 radius: 70,
-                backgroundImage: AssetImage('Images/profile.jpg'),
+                backgroundImage: AssetImage('Images/c.jpg'),
               ),
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
@@ -216,7 +216,7 @@ class _HomeState extends State<Home> {
             ),
 
             Text(
-              "Hanyia Iftikhar",
+              "Talha Aslam",
               style: TextStyle(fontSize: 20.0),
             ),
             //use to increase height between two widgets
@@ -224,7 +224,7 @@ class _HomeState extends State<Home> {
               height: 20.0,
             ),
             Text(
-              "Haniya's Programming Level",
+              "Talha's Programming Level",
               style: TextStyle(
                 fontSize: 20.0,
                 fontWeight: FontWeight.bold,
@@ -249,7 +249,7 @@ class _HomeState extends State<Home> {
                 width: 5.0,
               ),
               Text(
-                "ha104g38@gmail.com",
+                "ta104g38@gmail.com",
                 style: TextStyle(
                   fontSize: 20.0,
                 ),
