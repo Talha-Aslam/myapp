@@ -5,13 +5,25 @@ void main() {
   runApp(MaterialApp(home: Home()));
 }
 
-//stless this is snippet for stateless widget
-class Home extends StatelessWidget {
+class Home extends StatefulWidget {
   const Home({super.key});
 
   @override
+  State<Home> createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
+  int counter = 0;
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
+//stless this is snippet for stateless widget
+// class Home extends StatelessWidget {
+//   const Home({super.key});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
       // appBar: AppBar(
       //   title: const Text(
       //     "Hania First App",
@@ -154,17 +166,14 @@ class Home extends StatelessWidget {
       // *********************************************************************
       // *********************************************************************
       // new app to show your profile
-      backgroundColor: Colors.grey[600],
+      backgroundColor: Color.fromARGB(255, 255, 255, 255),
       appBar: AppBar(
-        backgroundColor: Colors.red[300],
+        backgroundColor: const Color.fromARGB(255, 115, 229, 204),
         title: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Icon(
-              Icons.account_circle,
-              size: 40,
-              color: Colors.blueGrey[100],
-            ),
+            Icon(Icons.account_circle,
+                size: 40, color: Color.fromARGB(255, 106, 65, 203)),
             Text("  Profile Pic")
           ],
         ),
@@ -174,21 +183,91 @@ class Home extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
+            //to show image at center
+            Center(
+                // to make outline around the circle
+                child: Container(
+              // to show image in a cricle formate
+              child: CircleAvatar(
+                radius: 70,
+                backgroundImage: AssetImage('Images/profile.jpg'),
+              ),
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                border: Border.all(
+                  color: Colors.teal,
+                ),
+              ),
+            )),
+            //to seprate the picture and the details(name,levels,mails)
+            Divider(
+              height: 20.0,
+              thickness: 5.0,
+              indent: 400.0,
+              endIndent: 400.0,
+              color: Colors.grey,
+            ),
             Text(
               "Name:",
               style: TextStyle(
                 fontSize: 20.0,
-              ),
-            ),
-            Text(
-              "Talha Aslam",
-              style: TextStyle(
-                fontSize: 30.0,
                 fontWeight: FontWeight.bold,
               ),
             ),
+
+            Text(
+              "Hanyia Iftikhar",
+              style: TextStyle(fontSize: 20.0),
+            ),
+            //use to increase height between two widgets
+            SizedBox(
+              height: 20.0,
+            ),
+            Text(
+              "Haniya's Programming Level",
+              style: TextStyle(
+                fontSize: 20.0,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            Text(
+              'Level: $counter',
+              style: TextStyle(
+                fontSize: 20.0,
+              ),
+            ),
+            SizedBox(
+              height: 20.0,
+            ),
+
+            Row(children: <Widget>[
+              Icon(
+                Icons.email_outlined,
+                size: 30.0,
+              ),
+              SizedBox(
+                width: 5.0,
+              ),
+              Text(
+                "ha104g38@gmail.com",
+                style: TextStyle(
+                  fontSize: 20.0,
+                ),
+              ),
+            ])
           ],
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          setState(() {
+            counter += 1;
+          });
+        },
+        child: Icon(
+          Icons.add,
+        ),
+        hoverColor: Color.fromARGB(255, 125, 220, 220),
       ),
     );
   }
