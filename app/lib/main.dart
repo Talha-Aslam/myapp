@@ -306,6 +306,25 @@ class _HomeState extends State<Home> {
         //   children: quotes.map((quote) => Text(quote)).toList(),
         // )
         //****************************To display data from using the class*****************************************/
+        // appBar: AppBar(
+        //   title: const Text(
+        //     "My First App",
+        //     style: TextStyle(
+        //       fontSize: 30.0,
+        //       fontWeight: FontWeight.bold,
+        //       color: Color.fromARGB(115, 0, 0, 0),
+        //       //backgroundColor: const Color.fromARGB(255, 129, 175, 213),
+        //     ),
+        //   ),
+        //   backgroundColor: Color.fromARGB(95, 203, 114, 114),
+        //   centerTitle: true,
+        // ),
+        // body: Column(
+        //   children: quotes
+        //       .map((quote) => Text("${quote.text} -  ${quote.aurthor}"))
+        //       .toList(),
+        // )
+        //*******************Using Card**************************************/
         appBar: AppBar(
           title: const Text(
             "My First App",
