@@ -275,7 +275,7 @@ class _HomeState extends State<Home> {
         //   hoverColor: Color.fromARGB(255, 125, 220, 220),
         // ),
         //**********************Lists of Data*****************************//
-        //
+        //to display data from the list of data
         appBar: AppBar(
           title: const Text(
             "My First App",
