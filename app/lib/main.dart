@@ -14,11 +14,11 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   int counter = 0;
-  List<String> quotes = [
-    'Be yourself; everyone else is already taken.',
-    'Two things are infinite: the universe and human stupidity; and I am not sure about the universe.',
-    'Be who you are and say what you feel, because those who mind do not matter and those who matter do not mind.'
-  ];
+  // List<String> quotes = [
+  //   'Be yourself; everyone else is already taken.',
+  //   'Two things are infinite: the universe and human stupidity; and I am not sure about the universe.',
+  //   'Be who you are and say what you feel, because those who mind do not matter and those who matter do not mind.'
+  // ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -276,21 +276,23 @@ class _HomeState extends State<Home> {
         // ),
         //**********************Lists of Data*****************************//
         //to display data from the list of data
-        appBar: AppBar(
-          title: const Text(
-            "My First App",
-            style: TextStyle(
-              fontSize: 30.0,
-              fontWeight: FontWeight.bold,
-              color: Color.fromARGB(115, 0, 0, 0),
-              //backgroundColor: const Color.fromARGB(255, 129, 175, 213),
-            ),
-          ),
-          backgroundColor: Color.fromARGB(95, 203, 114, 114),
-          centerTitle: true,
-        ),
-        body: Column(
-          children: quotes.map((quote) => Text(quote)).toList(),
-        ));
+        // appBar: AppBar(
+        //   title: const Text(
+        //     "My First App",
+        //     style: TextStyle(
+        //       fontSize: 30.0,
+        //       fontWeight: FontWeight.bold,
+        //       color: Color.fromARGB(115, 0, 0, 0),
+        //       //backgroundColor: const Color.fromARGB(255, 129, 175, 213),
+        //     ),
+        //   ),
+        //   backgroundColor: Color.fromARGB(95, 203, 114, 114),
+        //   centerTitle: true,
+        // ),
+        // body: Column(
+        //   children: quotes.map((quote) => Text(quote)).toList(),
+        // )
+
+        );
   }
 }
