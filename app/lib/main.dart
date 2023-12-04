@@ -1,3 +1,4 @@
+import 'quotes.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -19,6 +20,18 @@ class _HomeState extends State<Home> {
   //   'Two things are infinite: the universe and human stupidity; and I am not sure about the universe.',
   //   'Be who you are and say what you feel, because those who mind do not matter and those who matter do not mind.'
   // ];
+  List<Quotes> quotes = [
+    Quotes(
+        text: 'Be yourself; everyone else is already taken.', aurthor: "Talha"),
+    Quotes(
+        text:
+            'Two things are infinite: the universe and human stupidity; and I am not sure about the universe.',
+        aurthor: "talha"),
+    Quotes(
+        text:
+            'Be who you are and say what you feel, because those who mind do not matter and those who matter do not mind.',
+        aurthor: "haniya")
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -292,7 +305,24 @@ class _HomeState extends State<Home> {
         // body: Column(
         //   children: quotes.map((quote) => Text(quote)).toList(),
         // )
-
-        );
+        //****************************To display data from using the class*****************************************/
+        appBar: AppBar(
+          title: const Text(
+            "My First App",
+            style: TextStyle(
+              fontSize: 30.0,
+              fontWeight: FontWeight.bold,
+              color: Color.fromARGB(115, 0, 0, 0),
+              //backgroundColor: const Color.fromARGB(255, 129, 175, 213),
+            ),
+          ),
+          backgroundColor: Color.fromARGB(95, 203, 114, 114),
+          centerTitle: true,
+        ),
+        body: Column(
+          children: quotes
+              .map((quote) => Text("${quote.text} -  ${quote.aurthor}"))
+              .toList(),
+        ));
   }
 }
