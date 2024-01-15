@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 void main() {
   //runapp app ko run karna ka function jo materialapp ko run kary ga
-  runApp(MaterialApp(home: Home()));
+  runApp(const MaterialApp(home: Home()));
 }
 
 class Home extends StatefulWidget {
@@ -335,7 +335,7 @@ class _HomeState extends State<Home> {
               //backgroundColor: const Color.fromARGB(255, 129, 175, 213),
             ),
           ),
-          backgroundColor: Color.fromARGB(95, 203, 114, 114),
+          backgroundColor: const Color.fromARGB(95, 203, 114, 114),
           centerTitle: true,
         ),
         body: Column(
