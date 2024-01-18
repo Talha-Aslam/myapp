@@ -34,27 +34,7 @@ class _HomeState extends State<Home> {
   ];
 //*********************creatin a card with quote class template for the quotes ********************************/
   Widget quotetemplate(quote) {
-    return Card(
-      margin: EdgeInsets.fromLTRB(10, 10, 10, 2),
-      child: Padding(
-        padding: EdgeInsets.all(10),
-        child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: <Widget>[
-              Text(quote.text,
-                  style: TextStyle(
-                    fontSize: 15.0,
-                    color: Colors.blueGrey[600],
-                  )),
-              SizedBox(height: 6.0),
-              Text(quote.aurthor,
-                  style: TextStyle(
-                    fontSize: 10.0,
-                    color: Colors.blueGrey[600],
-                  ))
-            ]),
-      ),
-    );
+    return QuoteCard(quote: quote);
   }
 
   @override
@@ -350,6 +330,24 @@ class _HomeState extends State<Home> {
         //       .toList(),
         // )
         //*******************Using Card**************************************/
+        // appBar: AppBar(
+        //   title: const Text(
+        //     "My First App",
+        //     style: TextStyle(
+        //       fontSize: 30.0,
+        //       fontWeight: FontWeight.bold,
+        //       color: Color.fromARGB(115, 0, 0, 0),
+        //       //backgroundColor: const Color.fromARGB(255, 129, 175, 213),
+        //     ),
+        //   ),
+        //   backgroundColor: const Color.fromARGB(95, 203, 114, 114),
+        //   centerTitle: true,
+        // ),
+        // body: Column(
+        //   children: quotes.map((quote) => quotetemplate(quote)).toList(),
+        // ));
+
+        //*******************Extracting widgets******************** */
         appBar: AppBar(
           title: const Text(
             "My First App",
@@ -366,5 +364,34 @@ class _HomeState extends State<Home> {
         body: Column(
           children: quotes.map((quote) => quotetemplate(quote)).toList(),
         ));
+  }
+}
+
+class QuoteCard extends StatelessWidget {
+  final Quotes quote;
+  QuoteCard({required this.quote});
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      margin: EdgeInsets.fromLTRB(10, 10, 10, 2),
+      child: Padding(
+        padding: EdgeInsets.all(10),
+        child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: <Widget>[
+              Text(quote.text,
+                  style: TextStyle(
+                    fontSize: 15.0,
+                    color: Colors.blueGrey[600],
+                  )),
+              SizedBox(height: 6.0),
+              Text(quote.aurthor,
+                  style: TextStyle(
+                    fontSize: 10.0,
+                    color: Colors.blueGrey[600],
+                  ))
+            ]),
+      ),
+    );
   }
 }
