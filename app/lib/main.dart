@@ -30,8 +30,33 @@ class _HomeState extends State<Home> {
     Quotes(
         text:
             'Be who you are and say what you feel, because those who mind do not matter and those who matter do not mind.',
-        aurthor: "haniya")
+        aurthor: "Bilal")
   ];
+//*********************creatin a card with quote class template for the quotes ********************************/
+  Widget quotetemplate(quote) {
+    return Card(
+      margin: EdgeInsets.fromLTRB(10, 10, 10, 2),
+      child: Padding(
+        padding: EdgeInsets.all(10),
+        child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: <Widget>[
+              Text(quote.text,
+                  style: TextStyle(
+                    fontSize: 15.0,
+                    color: Colors.blueGrey[600],
+                  )),
+              SizedBox(height: 6.0),
+              Text(quote.aurthor,
+                  style: TextStyle(
+                    fontSize: 10.0,
+                    color: Colors.blueGrey[600],
+                  ))
+            ]),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -339,9 +364,7 @@ class _HomeState extends State<Home> {
           centerTitle: true,
         ),
         body: Column(
-          children: quotes
-              .map((quote) => Text("${quote.text} -  ${quote.aurthor}"))
-              .toList(),
+          children: quotes.map((quote) => quotetemplate(quote)).toList(),
         ));
   }
 }
