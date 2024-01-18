@@ -1,5 +1,6 @@
 import 'quotes.dart';
 import 'package:flutter/material.dart';
+import 'quotes_card.dart';
 
 void main() {
   //runapp app ko run karna ka function jo materialapp ko run kary ga
@@ -33,9 +34,15 @@ class _HomeState extends State<Home> {
         aurthor: "Bilal")
   ];
 //*********************creatin a card with quote class template for the quotes ********************************/
-  Widget quotetemplate(quote) {
-    return QuoteCard(quote: quote);
-  }
+  // Widget quotetemplate(quote) {
+  //   return QuoteCard(
+  //       quote: quote,
+  //       delete: () {
+  //         setState(() {
+  //           quotes.remove(quote);
+  //         });
+  //       });
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -362,36 +369,16 @@ class _HomeState extends State<Home> {
           centerTitle: true,
         ),
         body: Column(
-          children: quotes.map((quote) => quotetemplate(quote)).toList(),
-        ));
-  }
-}
-
-class QuoteCard extends StatelessWidget {
-  final Quotes quote;
-  QuoteCard({required this.quote});
-  @override
-  Widget build(BuildContext context) {
-    return Card(
-      margin: EdgeInsets.fromLTRB(10, 10, 10, 2),
-      child: Padding(
-        padding: EdgeInsets.all(10),
-        child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: <Widget>[
-              Text(quote.text,
-                  style: TextStyle(
-                    fontSize: 15.0,
-                    color: Colors.blueGrey[600],
-                  )),
-              SizedBox(height: 6.0),
-              Text(quote.aurthor,
-                  style: TextStyle(
-                    fontSize: 10.0,
-                    color: Colors.blueGrey[600],
+          children: quotes
+              .map((quote) => QuoteCard(
+                    quote: quote,
+                    delete: () {
+                      setState(() {
+                        quotes.remove(quote);
+                      });
+                    },
                   ))
-            ]),
-      ),
-    );
+              .toList(),
+        ));
   }
 }
