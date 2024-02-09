@@ -1,6 +1,6 @@
 // import 'quotes.dart';
 import 'package:flutter/material.dart';
-import 'pages/home.dart';
+import 'package:app/pages/home.dart';
 // import 'quotes_card.dart';
 
 // void main() {
@@ -71,7 +71,7 @@ void main() {
   //   return Scaffold(
       // appBar: AppBar(
       //   title: const Text(
-      //     "Hania First App",
+      //     "Talha First App",
       //     style: TextStyle(
       //       fontSize: 30.0,
       //       fontWeight: FontWeight.bold,
